@@ -21,7 +21,6 @@ ul {
 
 a {
   text-decoration: none;
-  color: #fff;
 }
 
 .container {
@@ -36,7 +35,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: black;
 }
 
 code {
@@ -78,6 +76,8 @@ p {
 
 .btn:hover {
   box-shadow: rgb(0 0 0 / 15%) 0px 8px 24px;
+  color: var(--primary);
+  background-color: var(--background);
 }
 
 input {

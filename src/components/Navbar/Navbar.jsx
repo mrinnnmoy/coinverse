@@ -1,34 +1,35 @@
 import React, { useState } from 'react';
-import { FaBars, FaTimes } from "react-icons/fa";
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import "./Navbar.css";
 
 const Navbar = () => {
-    const [click, setClick] = useState(false);
+    const [click, setClick] = useState(false)
     const handleClick = () => setClick(!click)
 
     return (
-        <div className="header">
+        <div className='navbar'>
             <div className="container">
                 <h1>Coin <span className="primary">Verse</span></h1>
-                <ul className={click ? "nav-menu active" : "nav-menu"}>
-                    <li>
+                <ul className={click ? 'nav active' : 'nav'}>
+                    <li className="nav-item">
                         <a href="#home">Home</a>
                     </li>
-                    <li>
-                        <a href="#featured">Featured</a>
+                    <li className="nav-item">
+                        <a href="#Featured">Featured</a>
                     </li>
-                    <li>
+                    <li className="nav-item">
                         <a href="#earn">Earn</a>
                     </li>
-                    <li>
-                        <a href="#contact">Contact</a>
+                    <li className="nav-item">
+                        <a href="#Contact">Contact</a>
+                    </li>
+                    <li className="nav-item">
+                        <a className='btn' href="#developers">Connect Wallet</a>
                     </li>
                 </ul>
-                <div className="btn-group">
-                    <button className="btn">Connect Wallet</button>
-                </div>
-                <div className="hamburger" onClick={handleClick}>
-                    {click ? (<FaTimes size={20} style={{ color: '#333' }} />) : (<FaBars size={20} style={{ color: '#333' }} />)}
+                <div onClick={handleClick} className="hamburger">
+                    {click ? (<AiOutlineClose className='icon' />) : (<AiOutlineMenu className='icon' />)}
+
                 </div>
             </div>
         </div>

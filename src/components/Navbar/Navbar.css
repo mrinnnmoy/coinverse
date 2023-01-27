@@ -1,96 +1,75 @@
-.header {
+.navbar {
     width: 100%;
     height: 90px;
-    border-bottom: 1px solid #eee;
-    background: black;
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 10;
+    background-color: #000;
 }
 
-.header .container {
+.navbar .container {
+    max-width: 1140px;
+    height: 100%;
+    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
-    padding: 1rem;
-}
-
-.colors {
-    color: var(--primary);
 }
 
 .primary {
     margin-left: -.85rem;
 }
 
-.nav-menu {
+.navbar .nav {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.nav-menu li {
-    padding: 0 1rem;
-}
-
-.nav-menu a {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #fff;
-}
-
-.nav-menu a:hover {
-    color: var(--primary);
+.navbar li {
+    padding: 1rem;
 }
 
 .hamburger {
     display: none;
-    cursor: pointer;
 }
 
-svg {
-    color: white;
+.navbar .icon {
+    color: #f4eeff;
+    font-size: 2rem;
+}
+
+.navbar h1,
+a {
+    color: #f4eeff;
+    padding: .5rem;
 }
 
 
-@media screen and (max-width:1240px) {
+@media screen and (max-width:940px) {
     .hamburger {
-        display: flex;
+        display: block;
+        padding: 1rem;
     }
 
-    .nav-menu {
+    .nav {
         position: absolute;
         flex-direction: column;
-        justify-content: start;
+        justify-content: start !important;
         top: 90px;
-        right: -100%;
-        width: 50%;
+        left: -100%;
+        width: 100%;
         height: 100vh;
-        transition: 0.4s;
-        z-index: 2;
-        background: #fff;
-        border-left: 1px solid #eee;
+        background-color: #000;
+        transition: 0.3s;
+    }
+
+    .nav.active {
+        left: 0;
+    }
+
+    .nav a {
+        font-size: 1.4rem;
     }
 
     .primary {
-        margin-left: -.5rem;
-    }
-
-    .nav-menu.active {
-        right: 0;
-    }
-
-    .nav-menu li {
-        padding: 1rem;
-        width: 100%;
-        border-bottom: 1px solid #eee;
-    }
-
-    .nav-menu a {
-        font-size: 1.2rem;
-    }
-
-    .btn-group {
-        display: none;
+        margin-left: -.55rem;
     }
 }

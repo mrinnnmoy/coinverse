@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 // import BTC from '../assets/btc-img.png'
-import { FiArrowUpRight, FiArrowDown } from 'react-icons/fi'
-import './Featured.css'
+import { FiArrowUpRight, FiArrowDown } from 'react-icons/fi';
+import "./Featured.css";
 
 const Featured = () => {
 
@@ -16,14 +16,14 @@ const Featured = () => {
         }).catch((error) => {
             console.log(error)
         })
-    }, [])
+    }, []);
 
     // console.log(data)
 
     if (!data) return null
 
     return (
-        <div className='featured'>
+        <div className='featured' id="featured">
             <div className='container'>
                 {/* Left */}
                 <div className='left'>
@@ -169,4 +169,4 @@ const Featured = () => {
     )
 }
 
-export default Featured
+export default Featured;

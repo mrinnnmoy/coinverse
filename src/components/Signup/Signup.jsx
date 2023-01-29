@@ -4,7 +4,7 @@ import Trade from "../../assets/trade.png";
 
 const Signup = () => {
     return (
-        <div className="signup">
+        <div className="signup" id="earn">
             <div className="container">
                 {/* left */}
                 <div className="left">
